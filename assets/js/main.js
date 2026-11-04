@@ -99,7 +99,11 @@ var desk=$('#desk'),wins=$('#windows'),dock=$('#dock'),zTop=20;
 function buildDock(){dock.innerHTML=APPS.map(function(a,i){return (i===APPS.length-1?'<span class="sep"></span>':'')+'<button data-open="'+a.id+'" aria-label="'+T[a.id]+'">'+a.icon+'<span class="tip">'+T[a.id]+'</span></button>'}).join('');bindMag()}
 function isOpen(w){return !!w&&!w.hidden&&!w.classList.contains('closing')}
 function closeWin(w){if(reduce){w.hidden=true;sync();return}w.classList.add('closing');sync();setTimeout(function(){w.hidden=true;w.classList.remove('closing');sync()},210)}
-function toggleWin(id){var w=$('#win-'+id);if(isOpen(w))closeWin(w);else openWin(id)}
+function toggleWin(id){var w=$('#win-'+id);if(isOpen(w)){closeWin(w);return}
+  /* phones: show one window at a time and scroll it into view */
+  if(innerWidth<=700){$$('.win',wins).forEach(function(x){if(x.id!=='win-'+id){x.hidden=true;x.classList.remove('closing')}})}
+  openWin(id);
+  if(innerWidth<=700){var n=$('#win-'+id);requestAnimationFrame(function(){scrollTo({top:n.getBoundingClientRect().top+scrollY-46,behavior:reduce?'auto':'smooth'})})}}
 function openWin(id){
   var w=$('#win-'+id),cfg=WIN[id];
   if(!w){w=document.createElement('div');w.className='win';w.id='win-'+id;w.style.width='min('+cfg.w+'px,calc(100% - 32px))';
