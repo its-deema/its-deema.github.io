@@ -119,18 +119,22 @@ function maxH(top){return desk.clientHeight-top-110}
 function zoom(w){if(innerWidth<=700)return;
   if(w._prev){var p=w._prev;w._prev=null;w.classList.add('animating');w.style.left=p.l;w.style.top=p.t;w.style.width=p.w;w.style.height=p.h;if(!p.sized)w.classList.remove('sized');setTimeout(function(){w.classList.remove('animating')},320);return}
   w._prev={l:w.style.left,t:w.style.top,w:w.style.width,h:w.style.height,sized:w.classList.contains('sized')};
-  var W=maxW(),top=50,H=maxH(top);w.classList.add('animating','sized');
+  var W=maxW(),top=50,H=maxH(top);w.classList.add('animating','sized');w.style.maxHeight='';
   w.style.width=W+'px';w.style.height=H+'px';w.style.left=((desk.clientWidth-W)/2)+'px';w.style.top=top+'px';front(w);
   setTimeout(function(){w.classList.remove('animating')},320)}
 function resizer(w){var g=$('.grip',w),on=false,sx,sy,ow,oh,ol;
   g.addEventListener('pointerdown',function(e){if(innerWidth<=700)return;e.preventDefault();e.stopPropagation();on=true;front(w);w._prev=null;
-    sx=e.clientX;sy=e.clientY;ow=w.offsetWidth;oh=w.offsetHeight;ol=w.offsetLeft;w.classList.add('sized');w.style.height=oh+'px';g.setPointerCapture(e.pointerId)});
+    sx=e.clientX;sy=e.clientY;ow=w.offsetWidth;oh=w.offsetHeight;ol=w.offsetLeft;w.classList.add('sized');w.style.maxHeight='';w.style.height=oh+'px';g.setPointerCapture(e.pointerId)});
   g.addEventListener('pointermove',function(e){if(!on)return;var rtl=LANG==='ar',dx=e.clientX-sx,dy=e.clientY-sy;
     var nw=Math.max(MIN_W,Math.min(maxW(),ow+(rtl?-dx:dx))),nh=Math.max(MIN_H,Math.min(maxH(w.offsetTop),oh+dy));
     w.style.width=nw+'px';w.style.height=nh+'px';if(rtl)w.style.left=(ol+ow-nw)+'px'});
   g.addEventListener('pointerup',function(){on=false})}
 function place(w,cfg){var W=desk.clientWidth,H=desk.clientHeight,x=W*cfg.pos[0];if(LANG==='ar')x=W-x-w.offsetWidth;
-  w.style.left=Math.max(16,Math.min(W-w.offsetWidth-16,x))+'px';w.style.top=Math.max(20,Math.min(H-w.offsetHeight-120,H*cfg.pos[1]))+'px'}
+  w.style.left=Math.max(16,Math.min(W-w.offsetWidth-16,x))+'px';
+  /* keep windows below the headline and above the dock, so short laptop screens still fit */
+  var hello=$('.hello',desk),hb=hello?hello.getBoundingClientRect().bottom-desk.getBoundingClientRect().top+20:0,DOCK=110,MINH=280;
+  var top=Math.max(H*cfg.pos[1],hb);if(H-top-DOCK<MINH)top=Math.max(20,H-DOCK-MINH);
+  w.style.top=top+'px';if(!w.classList.contains('sized')&&innerWidth>700)w.style.maxHeight=Math.max(220,H-top-DOCK)+'px'}
 function front(w){$$('.win',wins).forEach(function(x){x.classList.remove('front')});w.classList.add('front');w.style.zIndex=++zTop}
 function sync(){$$('#desktop [data-open]').forEach(function(b){b.classList.toggle(b.closest('#dock')?'open':'on',isOpen($('#win-'+b.dataset.open)))})}
 function drag(w){var bar=$('.bar',w),sx,sy,ox,oy,on=false;
