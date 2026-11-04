@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deema Alnasser · Software Engineer</title>
+<meta name="description" content="Deema Alnasser, software engineer. Projects, experience, skills and certificates.">
+<meta property="og:title" content="Deema Alnasser · Software Engineer">
+<meta property="og:description" content="Software engineer building reliable, well-designed web products.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main id="desktop">
+  <div class="wallpaper" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <nav class="menubar glass gutter" aria-label="Main">
+    <ul>
+      <li class="brand" data-t="name"></li>
+      <li class="hide-sm"><button data-open="about" data-t="about"></button></li>
+      <li class="hide-sm"><button data-open="experience" data-t="experience"></button></li>
+      <li class="hide-sm"><button data-open="projects" data-t="projects"></button></li>
+      <li class="hide-sm"><button data-open="contact" data-t="contact"></button></li>
+    </ul>
+    <ul class="right">
+      <li><button type="button" data-lang-toggle aria-label="Switch language" style="font-weight:600;min-width:28px;justify-content:center"></button></li>
+      <li><button type="button" data-theme-toggle aria-label="Switch light or dark"></button></li>
+      <li class="hide-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-inline:.3rem"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></li>
+      <li class="clock" data-clock>--</li>
+    </ul>
+  </nav>
+
+  <div class="desk gutter" id="desk">
+    <header class="hello">
+      <h1 data-h1>Welcome to<br>Deema's desktop</h1>
+      <p data-intro></p>
+    </header>
+
+    <aside class="note" id="note" aria-label="Currently"></aside>
+
+    <div class="icons">
+      <button class="dicon" data-open="projects"><svg viewBox="0 0 48 48"><path d="M4 12a4 4 0 0 1 4-4h11l4 4h17a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" fill="#6EA8DC"/><path d="M4 18h40v18a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" fill="#8CC0EC"/></svg><span data-t="projects"></span></button>
+      <button class="dicon" data-open="experience"><svg viewBox="0 0 48 48"><path d="M4 12a4 4 0 0 1 4-4h11l4 4h17a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" fill="#A98BCF"/><path d="M4 18h40v18a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" fill="#C3A9E2"/></svg><span data-t="experience"></span></button>
+      <button class="dicon" data-open="trash"><svg viewBox="0 0 48 48"><path class="tr-lid" d="M10 12h28" stroke="#9aa0aa" stroke-width="3" stroke-linecap="round"/><path d="M20 12V9h8v3" fill="none" stroke="#9aa0aa" stroke-width="2.4"/><path d="M12 16h24l-2.4 25a3 3 0 0 1-3 2.7H17.4a3 3 0 0 1-3-2.7z" fill="#E7EAF0" stroke="#b4bac4" stroke-width="1.4"/><g class="tr-paper"><rect x="17" y="13" width="9" height="11" rx="1" fill="#fff" stroke="#c9ced6" transform="rotate(-14 21 18)"/><rect x="23" y="12" width="9" height="11" rx="1" fill="#FFF3B8" stroke="#e5d58a" transform="rotate(10 27 17)"/></g><path d="M20 21v17M24 21v17M28 21v17" stroke="#c3c8d0" stroke-width="1.6" stroke-linecap="round"/></svg><span data-t="trash"></span></button>
+    </div>
+
+    <div id="windows"></div>
+  </div>
+
+  <div class="dock-wrap">
+    <nav class="dock glass" id="dock" aria-label="Sections"></nav>
+  </div>
+</main>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
