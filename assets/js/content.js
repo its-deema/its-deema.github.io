@@ -41,6 +41,8 @@ var CONTENT={
   ],
   education:{degree:'B.S. Information Technology',school:'Qassim University',date:'2020 – 2025'},
   projects:[
+    {name:'Task Manager API',kind:'REST API · learning .NET',date:'In progress',color:'peach',url:'https://github.com/its-deema/TaskManager',
+     desc:'A task management API built to learn .NET the way real projects use it: controllers, services and DTOs, request validation, async down to the database, and EF Core migrations.',tags:['ASP.NET Core','C#','EF Core','SQLite']},
     {name:'Nafas',kind:'AI mood journaling app',date:'Dec 2025',color:'lav',
      desc:'Tracks emotional patterns through chat, with LLaMA 3.2 running locally and MongoDB for storage.',tags:['LLaMA 3.2','MongoDB','Local AI']},
     {name:'Tooth Truth',kind:'Dental disease classification · graduation project',date:'Apr 2025',color:'sky',
@@ -106,6 +108,8 @@ var CONTENT={
   ],
   education:{degree:'بكالوريوس تقنية المعلومات',school:'جامعة القصيم',date:'2020 – 2025'},
   projects:[
+    {name:'Task Manager API',kind:'واجهة REST · تعلّم ⁦.NET⁩',date:'قيد التطوير',color:'peach',url:'https://github.com/its-deema/TaskManager',
+     desc:'واجهة برمجية لإدارة المهام بنيتها لأتعلّم ⁦.NET⁩ بالطريقة المستخدمة في المشاريع الحقيقية: طبقات Controllers وServices وDTOs، والتحقق من الطلبات، وعمليات غير متزامنة حتى قاعدة البيانات، وترحيلات EF Core.',tags:['ASP.NET Core','C#','EF Core','SQLite']},
     {name:'نَفَس',kind:'تطبيق يوميات المزاج بالذكاء الاصطناعي',date:'ديسمبر 2025',color:'lav',
      desc:'يتتبّع أنماط المشاعر عبر المحادثة، باستخدام LLaMA 3.2 محلياً وقاعدة MongoDB للتخزين.',tags:['LLaMA 3.2','MongoDB','ذكاء اصطناعي محلي']},
     {name:'Tooth Truth',kind:'تصنيف أمراض الأسنان · مشروع التخرج',date:'أبريل 2025',color:'sky',
