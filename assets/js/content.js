@@ -18,8 +18,8 @@ var CONTENT={
     "I hold a B.S. in Information Technology from Qassim University, build AI side projects for fun, and bring a product management and UI/UX background to everything I ship."
   ],
   facts:[['Now','Ntg Clarity'],['Focus','Software engineering'],['Languages','Arabic · English']],
-  now:[{k:'Building',v:'An AI tool that reads a whole codebase, explains how it works and writes its documentation.'},
-       {k:'Learning',v:'.NET, building web APIs with C# and ASP.NET Core.'}],
+  now:[{k:'Building',v:'An AI project in Arabic, powered by RAG.'},
+       {k:'Learning',v:'How AI finds the right information and uses it.'}],
   trash:[{f:'works_on_my_machine.sh',n:'Replaced with Docker.'},{f:'TODO_fix_later.txt',n:'Later never came, so I fixed it.'},{f:'docs_coming_soon.md',n:'Codeduc wrote them.'},{f:'final_v2_REAL_final.fig',n:'There was a v3.'}],
   experience:[
     {role:'AI Product Engineer',org:'Ntg Clarity',date:'May 2026 – Present',
@@ -83,8 +83,8 @@ var CONTENT={
     'حاصلة على بكالوريوس تقنية المعلومات من جامعة القصيم، أبني مشاريع جانبية بالذكاء الاصطناعي، وأستفيد من خلفيتي في إدارة المنتجات وتصميم تجربة المستخدم في كل ما أطلقه.'
   ],
   facts:[['حالياً','Ntg Clarity'],['التركيز','هندسة البرمجيات'],['اللغات','العربية · الإنجليزية']],
-  now:[{k:'أبني',v:'أداة ذكاء اصطناعي تقرأ المشروع البرمجي كاملاً، وتشرح طريقة عمله، وتكتب توثيقه.'},
-       {k:'أتعلّم',v:'تطوير واجهات برمجية بمنصة ⁦.NET⁩ ولغة ⁦C#⁩ وإطار ⁦ASP.NET Core⁩.'}],
+  now:[{k:'أبني',v:'مشروع ذكاء اصطناعي بالعربي، يشتغل بتقنية ⁦RAG⁩'},
+       {k:'أتعلّم',v:'كيف يوصل الذكاء الاصطناعي للمعلومة الصح ويستخدمها.'}],
   trash:[{f:'works_on_my_machine.sh',n:'استُبدل بـ Docker.'},{f:'TODO_fix_later.txt',n:'بعدين ما جا، فحلّيتها.'},{f:'docs_coming_soon.md',n:'كتبها ⁦Codeduc⁩.'},{f:'final_v2_REAL_final.fig',n:'كان فيه نسخة ثالثة.'}],
   experience:[
     {role:'مهندسة منتجات ذكاء اصطناعي',org:'Ntg Clarity',date:'مايو 2026 – الآن',
