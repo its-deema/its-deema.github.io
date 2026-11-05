@@ -43,6 +43,7 @@ var APPS=[
  {id:'projects',icon:appIcon('#9ED08A','#5E9F4C','<path d="M15 21h11l3 3h16v18H15z"/>')},
  {id:'skills',icon:appIcon('#3A3F47','#1C1F24','<path d="M18 23l7 7-7 7M29 38h13"/>')},
  {id:'resume',icon:appIcon('#FFE08A','#F4B93E','<circle cx="30" cy="26" r="9"/><path d="M24.5 33.5L22 45l8-4 8 4-2.5-11.5"/>')},
+ {id:'photos',icon:appIcon('#F6B7C6','#E07F9A','<rect x="16" y="19" width="28" height="22" rx="3"/><circle cx="37" cy="26" r="2.2"/><path d="M18 39l8-8 6 6 4-4 6 6"/>')},
  {id:'contact',icon:appIcon('#7FC4F2','#3B8FD6','<rect x="15" y="20" width="30" height="21" rx="3"/><path d="M16 22l14 10 14-10"/>')}
 ];
 
@@ -55,13 +56,32 @@ var WIN={
  writing:{t:function(){return T.writing},w:420,pos:[.5,.46],html:function(){return listHTML(D.writing.map(function(w){return{a:w.title,d:w.date,url:w.url}}))}},
  contact:{t:function(){return T.contact},w:440,pos:[.56,.5],html:contactHTML},
  resume:{t:function(){return T.resumeFile},w:440,pos:[.62,.2],html:resumeHTML},
- trash:{t:function(){return T.trash},w:460,pos:[.6,.22],html:trashHTML,init:trashInit}
+ trash:{t:function(){return T.trash},w:460,pos:[.6,.22],html:trashHTML,init:trashInit},
+ photos:{t:function(){return T.photos},w:640,pos:[.26,.2],html:photosHTML,init:photosInit}
 };
 function trashHTML(){return '<div class="trash"><ul class="tr-list">'+D.trash.map(function(t){return '<li><span class="tr-f" dir="ltr">'+esc(t.f)+'</span><span class="tr-n">'+esc(t.n)+'</span></li>'}).join('')+'</ul><div class="tr-foot"><span class="tr-c">'+D.trash.length+T.trashCount+'</span><button class="mbtn primary tr-empty">'+T.emptyTrash+'</button></div></div>'}
 function trashInit(w){var b=$('.tr-empty',w);b.onclick=function(){var lis=$$('.tr-list li',w);lis.forEach(function(li,i){li.style.animationDelay=(i*60)+'ms';li.classList.add('gone')});
   setTimeout(function(){$('.trash',w).innerHTML='<p class="tr-done">'+esc(T.trashEmpty)+'</p>';var ic=$('.dicon[data-open="trash"]');if(ic)ic.classList.add('empty')},reduce?0:lis.length*60+380)}}
+/* ---------- photos ---------- */
+function photosHTML(){var keys=Object.keys(GALLERY_PROJECTS).filter(function(k){return GALLERY.some(function(g){return g.project===k})});
+  return '<div class="ph"><div class="ph-tabs" role="tablist"><button class="on" data-f="">'+esc(T.all)+'</button>'+keys.map(function(k){return '<button data-f="'+k+'">'+esc(GALLERY_PROJECTS[k][LANG])+'</button>'}).join('')+'</div>'+
+  '<div class="ph-grid">'+GALLERY.map(function(g,i){return '<button class="ph-item" data-i="'+i+'" data-p="'+g.project+'" aria-label="'+esc(g[LANG])+'"><img loading="lazy" referrerpolicy="no-referrer" src="'+g.src+'" alt="'+esc(g[LANG])+'"><span>'+esc(GALLERY_PROJECTS[g.project][LANG])+' · '+esc(g[LANG])+'</span></button>'}).join('')+'</div><p class="ph-empty" hidden>'+esc(T.noPhotos)+'</p></div>'}
+function photosInit(w){var tabs=$$('.ph-tabs button',w),items=$$('.ph-item',w),empty=$('.ph-empty',w);
+  function visible(){return items.filter(function(b){return !b.hidden&&!b.classList.contains('bad')})}
+  function check(){empty.hidden=visible().length>0}
+  items.forEach(function(b){var im=$('img',b);im.onerror=function(){b.classList.add('bad');check()};b.onclick=function(){lightbox(visible(),visible().indexOf(b))}});
+  tabs.forEach(function(t){t.onclick=function(){tabs.forEach(function(x){x.classList.toggle('on',x===t)});items.forEach(function(b){b.hidden=!!t.dataset.f&&b.dataset.p!==t.dataset.f});check()}});check()}
+function lightbox(list,i){if(!list.length)return;var lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');
+  lb.innerHTML='<button class="lb-x" aria-label="Close">×</button><button class="lb-nav lb-prev" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lb-nav lb-next" aria-label="Next">›</button>';
+  document.body.appendChild(lb);var img=$('img',lb),cap=$('figcaption',lb);
+  function show(n){i=(n+list.length)%list.length;var g=GALLERY[+list[i].dataset.i];img.src=g.src;img.alt=g[LANG];cap.textContent=GALLERY_PROJECTS[g.project][LANG]+' · '+g[LANG]+'   '+(i+1)+' / '+list.length}
+  function close(){document.removeEventListener('keydown',key);lb.classList.add('out');setTimeout(function(){lb.remove()},reduce?0:180)}
+  function key(e){if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(LANG==='ar'?i-1:i+1);else if(e.key==='ArrowLeft')show(LANG==='ar'?i+1:i-1)}
+  $('.lb-x',lb).onclick=close;$('.lb-prev',lb).onclick=function(e){e.stopPropagation();show(i-1)};$('.lb-next',lb).onclick=function(e){e.stopPropagation();show(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});document.addEventListener('keydown',key);
+  $$('.lb-nav',lb).forEach(function(b){b.hidden=list.length<2});show(i);$('.lb-x',lb).focus()}
 /* ---------- interactive terminal ---------- */
-var TNAMES={about:'about',experience:'experience',projects:'projects',contact:'contact',certificates:'resume',trash:'trash'};
+var TNAMES={about:'about',experience:'experience',projects:'projects',contact:'contact',certificates:'resume',photos:'photos',trash:'trash'};
 function termInit(w){var out=$('.t-out',w),inp=$('.t-in',w),body=$('.body',w),hist=[],hi=0;
   function line(html,cls){var d=document.createElement('div');d.className='t-row '+(cls||'');d.dir='auto';d.innerHTML=html;out.appendChild(d);body.scrollTop=body.scrollHeight}
   function echo(cmd){line('<span class="t-ps">deema@desktop ~ %</span> '+esc(cmd),'t-cmd')}
