@@ -35,13 +35,11 @@ var CONTENT={
     {role:'Product Manager Trainee',org:'Masar Program · SANI, supported by Misk',date:'Nov 2024',
      points:['Product management track covering RICE, PRDs and user stories, with case studies on Jahez and Haraj.']},
     {role:'Cybersecurity Trainee',org:'National Cybersecurity Authority & SITE',date:'Jul 2024',
-     points:['Three-week camp on network security, vulnerability detection and ethical hacking, with hands-on CTF challenges.']},
-    {role:'Python Instructor',org:'Code Your Dreams',date:'May 2023',
-     points:['Taught high school students Python fundamentals, ending with a team-built guessing game.']}
+     points:['Three-week camp on network security, vulnerability detection and ethical hacking, with hands-on CTF challenges.']}
   ],
   education:{degree:'B.S. Information Technology',school:'Qassim University',date:'2020 – 2025'},
   projects:[
-    {name:'Nafas',kind:'AI mood journaling app',date:'Dec 2025',color:'lav',url:'https://github.com/its-deema/Nafas-AI-Powered-Mood-Journaling',
+    {name:'Nafas',kind:'AI mood journaling app',date:'Dec 2025',color:'lav',
      desc:'Tracks emotional patterns through chat, with LLaMA 3.2 running locally and MongoDB for storage.',tags:['LLaMA 3.2','MongoDB','Local AI']},
     {name:'Tooth Truth',kind:'Dental disease classification · graduation project',date:'Apr 2025',color:'sky',url:'https://github.com/its-deema/ToothTruth-Dental-Disease-Classification',
      desc:'Compared 5 ML models on 10,580 panoramic X-rays across 93 classes. Worked with dental specialists to fix label inconsistencies by restructuring them into a parent–child hierarchy, and led all technical work.',tags:['Python','Machine learning','Medical imaging']},
@@ -78,7 +76,7 @@ var CONTENT={
  ar:{
   name:'ديما الناصر', initials:'د', title:'مهندسة برمجيات',
   h1:'<span class="w">أهلاً بك في</span><br><span class="w">سطح مكتب</span> <span class="w"><em>ديما</em></span>',
-  intro:'أنا ديما، مهندسة برمجيات أبني أنظمة خلفية موثوقة ومنتجات تعمل بالذكاء الاصطناعي، من الـ API حتى آخر بكسل.',
+  intro:'أنا ديما، مهندسة برمجيات أبني أنظمة خلفية موثوقة ومنتجات تعمل بالذكاء الاصطناعي.',
   about:[
     'مهندسة منتجات ذكاء اصطناعي في Ntg Clarity، أبني فيها Codeduc، منصة تحليل كود بالذكاء الاصطناعي تؤتمت فهم المشاريع البرمجية وتوثيقها.',
     'وقبلها في مصدر، بنيت وطوّرت خدمات بلغة Java وإطار Spring Boot لأنظمة مؤسسية، منها نظام مُدد لإدارة الرواتب.',
@@ -99,16 +97,14 @@ var CONTENT={
              'متابعة عمليات النشر والتحقق منها عبر Jenkins CI/CD، مع اختبارات وحدة واختبارات انحدار.',
              'ربط الخدمات بواجهات Angular باستخدام resolvers والتخزين المؤقت لتقليل الطلبات المكررة.',
              'تشخيص مشكلة إنتاج حرجة من المستوى L1 وإطلاق الإصلاح العاجل بالتعاون مع مهندسين أقدم.']},
-    {role:'متدربة إدارة منتجات',org:'برنامج مسار · سَني بدعم من مسك',date:'نوفمبر 2024',
+    {role:'متدربة إدارة منتجات',org:'برنامج مسار · صانع بدعم من مسك',date:'نوفمبر 2024',
      points:['مسار إدارة المنتجات: إطار RICE، ووثائق PRD، وقصص المستخدم، مع دراسات حالة على جاهز وحراج.']},
     {role:'متدربة أمن سيبراني',org:'الهيئة الوطنية للأمن السيبراني و SITE',date:'يوليو 2024',
-     points:['معسكر لثلاثة أسابيع في أمن الشبكات واكتشاف الثغرات والاختراق الأخلاقي، مع تحديات CTF عملية.']},
-    {role:'مدرّبة Python',org:'دورة Code Your Dreams',date:'مايو 2023',
-     points:['تدريس أساسيات Python لطلاب المرحلة الثانوية، واختُتمت الدورة بلعبة تخمين بناها الطلاب معاً.']}
+     points:['معسكر لثلاثة أسابيع في أمن الشبكات واكتشاف الثغرات والاختراق الأخلاقي، مع تحديات CTF عملية.']}
   ],
   education:{degree:'بكالوريوس تقنية المعلومات',school:'جامعة القصيم',date:'2020 – 2025'},
   projects:[
-    {name:'نَفَس',kind:'تطبيق يوميات المزاج بالذكاء الاصطناعي',date:'ديسمبر 2025',color:'lav',url:'https://github.com/its-deema/Nafas-AI-Powered-Mood-Journaling',
+    {name:'نَفَس',kind:'تطبيق يوميات المزاج بالذكاء الاصطناعي',date:'ديسمبر 2025',color:'lav',
      desc:'يتتبّع أنماط المشاعر عبر المحادثة، باستخدام LLaMA 3.2 محلياً وقاعدة MongoDB للتخزين.',tags:['LLaMA 3.2','MongoDB','ذكاء اصطناعي محلي']},
     {name:'Tooth Truth',kind:'تصنيف أمراض الأسنان · مشروع التخرج',date:'أبريل 2025',color:'sky',url:'https://github.com/its-deema/ToothTruth-Dental-Disease-Classification',
      desc:'مقارنة 5 نماذج تعلم آلة على 10,580 صورة أشعة بانورامية ضمن 93 فئة. عالجنا عدم اتساق التصنيفات مع أطباء الأسنان بإعادة هيكلتها في تسلسل هرمي، وقدتُ كل الجوانب التقنية.',tags:['Python','تعلم الآلة','الصور الطبية']},
@@ -133,7 +129,7 @@ var CONTENT={
     {name:'الجبر الخطي لتعلم الآلة وعلم البيانات',org:'DeepLearning.AI',date:'أكتوبر 2023'},
     {name:'جمع البيانات ومعالجتها باستخدام Python',org:'جامعة ميشيغان',date:'أكتوبر 2023'},
     {name:'معسكر الأمن السيبراني',org:'الهيئة الوطنية للأمن السيبراني و SITE',date:'يوليو 2024'},
-    {name:'إدارة المنتجات',org:'مسار من سَني',date:'2024'}
+    {name:'إدارة المنتجات',org:'مسار من صانع',date:'2024'}
   ],
   writing:[
     {title:'مين قال دورة برمجية للمبتدئين؟',date:'5 سبتمبر 2023',url:'https://deemaalnasser.com/ar/'},
@@ -156,6 +152,6 @@ education:'Education',certs:'Certifications',highlight:'Highlight',
   tHello:'أهلاً! اكتب help لتشوف وش تقدر تسوي هنا.',tHelp:{help:'عرض هذه القائمة',whoami:'من هي ديما',now:'وش أشتغل عليه حالياً',skills:'التقنيات التي أستخدمها',ls:'عرض التطبيقات',open:'فتح تطبيق، مثل open projects',lang:'التبديل إلى الإنجليزية',theme:'فاتح أو داكن',clear:'مسح الشاشة'},
   tOpening:'جارٍ فتح',tNotFound:'الأمر غير موجود',tTry:'جرّب help.',tSudo:'تم منح الصلاحية. نفتح لك صفحة التواصل عشان تسلّم.',
 education:'التعليم',certs:'الشهادات',highlight:'إنجاز',
-  openResume:'فتح السيرة الذاتية (PDF)',open2:'متاحة لفرص هندسة البرمجيات والتعاون والمشكلات المثيرة للاهتمام.',
+  openResume:'فتح السيرة الذاتية (PDF)',open2:'منفتحة على فرص هندسة البرمجيات والتعاون في مشاريع جديدة، ويسعدني تواصلك.',
   copy:'نسخ البريد',copied:'تم النسخ',locale:'ar-u-ca-gregory-nu-latn',langBtn:'EN'}
 };
