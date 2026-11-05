@@ -152,6 +152,6 @@ education:'Education',certs:'Certifications',highlight:'Highlight',
   tHello:'أهلاً! اكتب help لتشوف وش تقدر تسوي هنا.',tHelp:{help:'عرض هذه القائمة',whoami:'من هي ديما',now:'وش أشتغل عليه حالياً',skills:'التقنيات التي أستخدمها',ls:'عرض التطبيقات',open:'فتح تطبيق، مثل open projects',lang:'التبديل إلى الإنجليزية',theme:'فاتح أو داكن',clear:'مسح الشاشة'},
   tOpening:'جارٍ فتح',tNotFound:'الأمر غير موجود',tTry:'جرّب help.',tSudo:'تم منح الصلاحية. نفتح لك صفحة التواصل عشان تسلّم.',
 education:'التعليم',certs:'الشهادات',highlight:'إنجاز',
-  openResume:'فتح السيرة الذاتية (PDF)',open2:'منفتحة على فرص هندسة البرمجيات والتعاون في مشاريع جديدة، ويسعدني تواصلك.',
+  openResume:'فتح السيرة الذاتية (PDF)',open2:'أبحث عن فرص في هندسة البرمجيات، وأرحّب بأي تعاون أو فكرة تستحق النقاش.',
   copy:'نسخ البريد',copied:'تم النسخ',locale:'ar-u-ca-gregory-nu-latn',langBtn:'EN'}
 };
