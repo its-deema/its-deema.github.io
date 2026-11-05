@@ -75,7 +75,7 @@ var CONTENT={
 
  ar:{
   name:'ديما الناصر', initials:'د', title:'مهندسة برمجيات',
-  h1:'<span class="w">أهلاً بك في</span><br><span class="w">سطح مكتب</span> <span class="w"><em>ديما</em></span>',
+  h1:'<span class="w">أهلاً بك في</span><br><span class="w">سطح مكتب</span> <span class="w"><em>ديــما</em></span>',
   intro:'أنا ديما، مهندسة برمجيات أبني أنظمة خلفية موثوقة ومنتجات تعمل بالذكاء الاصطناعي.',
   about:[
     'مهندسة منتجات ذكاء اصطناعي في Ntg Clarity، أبني فيها Codeduc، منصة تحليل كود بالذكاء الاصطناعي تؤتمت فهم المشاريع البرمجية وتوثيقها.',
