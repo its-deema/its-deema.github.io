@@ -20,7 +20,6 @@ var GALLERY=[
   {project:'nafas',src:'https://github.com/user-attachments/assets/2e20736e-ced1-43ae-902a-93d534e0211e',en:'Journaling',ar:'التدوين'},
   {project:'nafas',src:'https://github.com/user-attachments/assets/c99ec08a-b6a6-4e8f-914c-b78368643dd4',en:'Analytics dashboard',ar:'لوحة التحليلات'},
   {project:'toothtruth',src:'https://github.com/user-attachments/assets/fb4e57c3-06bb-4e8a-984f-5e19f99f610c',en:'Dental diseases tree',ar:'شجرة أمراض الأسنان'},
-  {project:'toothtruth',src:'https://github.com/user-attachments/assets/85588770-489b-4da5-8874-bc05ed2044da',en:'DenseNet121 predictions',ar:'تنبؤات نموذج DenseNet121'},
   {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/8459e845-1c88-47d7-800c-74388803820f',en:'Home page',ar:'الصفحة الرئيسية'},
   {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/b4560b23-7f09-4e0c-9feb-1bc4fee94722',en:'Game page',ar:'صفحة اللعب'},
   {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/7ed30a36-5a98-4ac7-aa27-1f4e4146699f',en:'Guessing a word',ar:'أثناء التخمين'}
@@ -160,14 +159,14 @@ var CONTENT={
 
 var UI={
  en:{about:'About',experience:'Experience',projects:'Projects',skills:'Terminal',writing:'Writing',contact:'Contact',resume:'Certificates',resumeFile:'Certificates',
-  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty. Only clean code from here on.',trashCount:' items',
+  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',library:'Library',allPhotos:'All Photos',photosWord:'photos',spaceHint:'Click or press Space to preview',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty. Only clean code from here on.',trashCount:' items',
   tHello:'Welcome! Type help to see what you can do here.',tHelp:{help:'show this list',whoami:'who is Deema',now:'what I am up to',skills:'my tech stack',ls:'list apps',open:'open an app, e.g. open projects',lang:'switch to Arabic',theme:'light or dark',clear:'clear the screen'},
   tOpening:'Opening',tNotFound:'command not found',tTry:'Try help.',tSudo:'Permission granted. Opening contact so you can say hi.',
 education:'Education',certs:'Certifications',highlight:'Highlight',
   openResume:'Open résumé (PDF)',open2:'Open to software engineering roles, collaborations, and interesting problems.',
   copy:'Copy email',copied:'Copied',locale:'en-US',langBtn:'ع'},
  ar:{about:'نبذة',experience:'الخبرات',projects:'المشاريع',skills:'الطرفية',writing:'الكتابات',contact:'تواصل',resume:'الشهادات',resumeFile:'الشهادات',
-  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فاضية. من الحين كود نظيف بس.',trashCount:' عناصر',
+  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',library:'المكتبة',allPhotos:'كل الصور',photosWord:'صور',spaceHint:'اضغط أو استخدم المسافة للمعاينة',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فاضية. من الحين كود نظيف بس.',trashCount:' عناصر',
   tHello:'أهلاً! اكتب help لتشوف وش تقدر تسوي هنا.',tHelp:{help:'عرض هذه القائمة',whoami:'من هي ديما',now:'وش أشتغل عليه حالياً',skills:'التقنيات التي أستخدمها',ls:'عرض التطبيقات',open:'فتح تطبيق، مثل open projects',lang:'التبديل إلى الإنجليزية',theme:'فاتح أو داكن',clear:'مسح الشاشة'},
   tOpening:'جارٍ فتح',tNotFound:'الأمر غير موجود',tTry:'جرّب help.',tSudo:'تم منح الصلاحية. نفتح لك صفحة التواصل عشان تسلّم.',
 education:'التعليم',certs:'الشهادات',highlight:'إنجاز',
