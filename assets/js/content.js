@@ -38,7 +38,7 @@ var CONTENT={
   facts:[['Now','Ntg Clarity'],['Focus','Software engineering'],['Languages','Arabic · English']],
   now:[{k:'Building',v:'An AI project in Arabic, powered by RAG.'},
        {k:'Learning',v:'How AI finds the right information and uses it.'}],
-  trash:[{f:'works_on_my_machine.sh',n:'Replaced with Docker.'},{f:'TODO_fix_later.txt',n:'Later never came, so I fixed it.'},{f:'docs_coming_soon.md',n:'Codeduc wrote them.'},{f:'final_v2_REAL_final.fig',n:'There was a v3.'}],
+  trash:[{f:'works_on_my_machine.sh',n:'Replaced with Docker'},{f:'docs_coming_soon.md',n:'Codeduc wrote them'},{f:'final_v2_REAL_final.fig',n:'There was a v3'}],
   experience:[
     {role:'AI Product Engineer',org:'Ntg Clarity',date:'May 2026 – Present',
      points:['Developed Codeduc, an AI-powered code analysis platform built with Python, FastAPI, Celery, PostgreSQL, Docker and Ollama to automate codebase understanding and documentation.',
@@ -103,7 +103,7 @@ var CONTENT={
   facts:[['حالياً','Ntg Clarity'],['التركيز','هندسة البرمجيات'],['اللغات','العربية · الإنجليزية']],
   now:[{k:'أبني',v:'مشروع ذكاء اصطناعي بالعربي، يشتغل بتقنية ⁦RAG⁩'},
        {k:'أتعلّم',v:'كيف يوصل الذكاء الاصطناعي للمعلومة الصح ويستخدمها.'}],
-  trash:[{f:'works_on_my_machine.sh',n:'استُبدل بـ Docker.'},{f:'TODO_fix_later.txt',n:'بعدين ما جا، فحلّيتها.'},{f:'docs_coming_soon.md',n:'كتبها ⁦Codeduc⁩.'},{f:'final_v2_REAL_final.fig',n:'كان فيه نسخة ثالثة.'}],
+  trash:[{f:'works_on_my_machine.sh',n:'استُبدل بـ Docker'},{f:'docs_coming_soon.md',n:'كتبها ⁦Codeduc⁩'},{f:'final_v2_REAL_final.fig',n:'كان فيه نسخة ثالثة'}],
   experience:[
     {role:'مهندسة منتجات ذكاء اصطناعي',org:'Ntg Clarity',date:'مايو 2026 – الآن',
      points:['تطوير Codeduc، منصة تحليل كود بالذكاء الاصطناعي مبنية بـ Python و FastAPI و Celery و PostgreSQL و Docker و Ollama لأتمتة فهم المشاريع البرمجية وتوثيقها.',
@@ -159,14 +159,14 @@ var CONTENT={
 
 var UI={
  en:{about:'About',experience:'Experience',projects:'Projects',skills:'Terminal',writing:'Writing',contact:'Contact',resume:'Certificates',resumeFile:'Certificates',
-  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',library:'Library',allPhotos:'All Photos',photosWord:'photos',spaceHint:'Click or press Space to preview',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty. Only clean code from here on.',trashCount:' items',
+  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',library:'Library',allPhotos:'All Photos',photosWord:'photos',spaceHint:'Click or press Space to preview',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty',trashCount:' items',
   tHello:'Welcome! Type help to see what you can do here.',tHelp:{help:'show this list',whoami:'who is Deema',now:'what I am up to',skills:'my tech stack',ls:'list apps',open:'open an app, e.g. open projects',lang:'switch to Arabic',theme:'light or dark',clear:'clear the screen'},
   tOpening:'Opening',tNotFound:'command not found',tTry:'Try help.',tSudo:'Permission granted. Opening contact so you can say hi.',
 education:'Education',certs:'Certifications',highlight:'Highlight',
   openResume:'Open résumé (PDF)',open2:'Open to software engineering roles, collaborations, and interesting problems.',
   copy:'Copy email',copied:'Copied',locale:'en-US',langBtn:'ع'},
  ar:{about:'نبذة',experience:'الخبرات',projects:'المشاريع',skills:'الطرفية',writing:'الكتابات',contact:'تواصل',resume:'الشهادات',resumeFile:'الشهادات',
-  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',library:'المكتبة',allPhotos:'كل الصور',photosWord:'صور',spaceHint:'اضغط أو استخدم المسافة للمعاينة',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فاضية. من الحين كود نظيف بس.',trashCount:' عناصر',
+  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',library:'المكتبة',allPhotos:'كل الصور',photosWord:'صور',spaceHint:'اضغط أو استخدم المسافة للمعاينة',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فارغة',trashCount:' عناصر',
   tHello:'أهلاً! اكتب help لتشوف وش تقدر تسوي هنا.',tHelp:{help:'عرض هذه القائمة',whoami:'من هي ديما',now:'وش أشتغل عليه حالياً',skills:'التقنيات التي أستخدمها',ls:'عرض التطبيقات',open:'فتح تطبيق، مثل open projects',lang:'التبديل إلى الإنجليزية',theme:'فاتح أو داكن',clear:'مسح الشاشة'},
   tOpening:'جارٍ فتح',tNotFound:'الأمر غير موجود',tTry:'جرّب help.',tSudo:'تم منح الصلاحية. نفتح لك صفحة التواصل عشان تسلّم.',
 education:'التعليم',certs:'الشهادات',highlight:'إنجاز',

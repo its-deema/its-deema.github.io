@@ -34,7 +34,7 @@ function aboutHTML(){return '<div class="who"><span class="avatar">'+D.initials+
   '<dl class="facts2">'+D.facts.map(function(f){return '<div><dt>'+esc(f[0])+'</dt><dd>'+esc(f[1])+'</dd></div>'}).join('')+'</dl>'}
 function expHTML(){return '<ul class="list">'+D.experience.map(function(x){return '<li><b>'+esc(x.role)+'</b><span class="date">'+esc(x.date)+'</span><span class="sub">'+esc(x.org)+'</span><ul class="pts">'+x.points.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></li>'}).join('')+'</ul>'+
   '<h4 class="sec-h">'+T.education+'</h4><ul class="list"><li><b>'+esc(D.education.degree)+'</b><span class="date">'+esc(D.education.date)+'</span><span class="sub">'+esc(D.education.school)+'</span></li></ul>'}
-function projHTML(){return '<div class="projects">'+D.projects.map(function(p){return '<article class="proj p-'+p.color+'"><div class="proj-top"><b>'+esc(p.name)+'</b><span class="date">'+esc(p.date)+'</span></div><span class="sub">'+esc(p.kind)+'</span><p>'+esc(p.desc)+'</p>'+tagsHTML(p.tags)+(p.url?'<a class="proj-link" href="'+p.url+'" target="_blank" rel="noopener">'+ICON.github+'GitHub <span aria-hidden="true">↗</span></a>':'')+'</article>'}).join('')+'</div>'}
+function projHTML(){return '<div class="projects">'+D.projects.map(function(p){return '<article class="proj p-'+p.color+'"><div class="proj-top"><b>'+esc(p.name)+'</b><span class="date">'+esc(p.date)+'</span></div><span class="sub">'+esc(p.kind)+'</span><p>'+esc(p.desc)+'</p>'+tagsHTML(p.tags)+(p.url?'<a class="proj-link" dir="ltr" href="'+p.url+'" target="_blank" rel="noopener">'+ICON.github+'GitHub <span aria-hidden="true">↗</span></a>':'')+'</article>'}).join('')+'</div>'}
 function resumeHTML(){return '<ul class="list">'+D.certs.map(function(c){return '<li><b>'+esc(c.name)+'</b><span class="date">'+esc(c.date)+'</span><span class="sub">'+esc(c.org)+'</span></li>'}).join('')+'</ul>'}
 function appIcon(g1,g2,glyph){return '<svg viewBox="0 0 60 60"><defs><linearGradient id="g'+g1.slice(1)+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+g1+'"/><stop offset="1" stop-color="'+g2+'"/></linearGradient></defs><rect x="2" y="2" width="56" height="56" rx="14" fill="url(#g'+g1.slice(1)+')"/><g fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">'+glyph+'</g></svg>'}
 var APPS=[
@@ -83,7 +83,7 @@ function photosHTML(){var keys=phKeys(),filt=[''].concat(keys);
    '<section class="pm-main">'+
      '<header class="pm-top"><div class="pm-ttl"><b class="pm-title">'+esc(T.allPhotos)+'</b><span class="pm-count"></span></div>'+
        '<div class="glass pm-zoom"><button data-z="-1" aria-label="Zoom out">'+SYM.minus+'</button><i></i><button data-z="1" aria-label="Zoom in">'+SYM.plus+'</button></div></header>'+
-     '<div class="pm-grid">'+GALLERY.map(function(g,i){return '<button class="pm-tile" data-i="'+i+'" data-p="'+g.project+'" aria-label="'+esc(GALLERY_PROJECTS[g.project][LANG]+' · '+g[LANG])+'"><span class="pm-thumb"><img loading="lazy" referrerpolicy="no-referrer" src="'+g.src+'" alt=""></span><span class="pm-name">'+esc(g[LANG])+'</span><span class="pm-sub">'+esc(GALLERY_PROJECTS[g.project][LANG])+'</span></button>'}).join('')+'</div>'+
+     '<div class="pm-grid">'+GALLERY.map(function(g,i){return '<button class="pm-tile" data-i="'+i+'" data-p="'+g.project+'" aria-label="'+esc(GALLERY_PROJECTS[g.project][LANG]+' · '+g[LANG])+'"><span class="pm-thumb"><img decoding="async" referrerpolicy="no-referrer" src="'+g.src+'" alt=""></span><span class="pm-name">'+esc(g[LANG])+'</span><span class="pm-sub">'+esc(GALLERY_PROJECTS[g.project][LANG])+'</span></button>'}).join('')+'</div>'+
      '<p class="ph-empty" hidden>'+esc(T.noPhotos)+'</p>'+
      '<nav class="glass pm-seg" aria-label="'+esc(T.projects)+'">'+filt.map(function(k){return '<button class="'+(k?'':'on')+'" data-f="'+k+'">'+esc(k?GALLERY_PROJECTS[k][LANG]:T.all)+'</button>'}).join('')+'</nav>'+
      '<div class="pm-view" hidden><header class="pm-vbar"><div class="glass pm-cap"><button class="pm-back" aria-label="Back">'+SYM.back.replace('<svg','<svg class="pm-ib"')+SYM.x.replace('<svg','<svg class="pm-ix"')+'</button></div><div class="pm-vt"><b></b><span></span></div>'+
@@ -231,5 +231,7 @@ var savedLang=null;try{savedLang=localStorage.getItem('lang')}catch(e){}
 setTheme(saved==='dark'?'dark':'light');
 setLang(savedLang==='ar'?'ar':'en');
 requestAnimationFrame(function(){openWin('about');if(innerWidth>700)setTimeout(function(){openWin('experience')},250)});
+/* warm the photo cache once the page is idle, so Photos opens instantly */
+addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){GALLERY.forEach(function(g){var i=new Image();i.referrerPolicy='no-referrer';i.src=g.src})})});
 addEventListener('resize',function(){if(innerWidth>700)$$('.win',wins).forEach(function(w){var id=w.id.slice(4);if(WIN[id])place(w,WIN[id])})});
 })();

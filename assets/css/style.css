@@ -242,7 +242,7 @@ button{font:inherit;color:inherit}
 .tr-done{text-align:center;padding:28px 0 18px;margin:0!important}
 .dicon.empty .tr-paper{display:none}
 
-.proj-link{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font:500 12px/1 var(--sans);color:var(--ink);text-decoration:none;opacity:.75}
+.proj-link{align-self:flex-start;display:inline-flex;align-items:center;gap:5px;margin-top:8px;font:500 12px/1 var(--sans);color:var(--ink);text-decoration:none;opacity:.75}
 .proj-link svg{width:13px;height:13px}
 .proj-link:hover{opacity:1;color:var(--accent)}
 
@@ -261,13 +261,13 @@ button{font:inherit;color:inherit}
 
 /* ---------- photos: macOS Photos look ---------- */
 #win-photos{height:min(580px,calc(100svh - 170px))}
-#win-photos .bar{position:absolute;top:0;inset-inline-start:0;width:188px;background:transparent;border:0;z-index:4}
+#win-photos .bar{position:absolute;top:0;inset-inline-start:0;width:196px;height:52px;padding:0 22px;background:transparent;border:0;z-index:4}
 #win-photos .bar b{display:none}
 #win-photos .body{padding:0;display:flex;flex-direction:column;max-height:none;overflow:hidden;background:var(--surface)}
 .glass{background:color-mix(in srgb,var(--surface) 62%,transparent);backdrop-filter:blur(22px) saturate(1.8);-webkit-backdrop-filter:blur(22px) saturate(1.8);border:1px solid color-mix(in srgb,#fff 55%,transparent);box-shadow:0 6px 18px -8px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.55)}
 :root[data-theme="dark"] .glass{border-color:rgba(255,255,255,.12);box-shadow:0 6px 18px -8px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08)}
 .pm{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:188px minmax(0,1fr)}
-.pm-side{margin:8px;margin-inline-end:0;padding:44px 8px 10px;border-radius:14px;display:flex;flex-direction:column;gap:1px;overflow:auto;
+.pm-side{margin:8px;margin-inline-end:0;padding:50px 8px 10px;border-radius:14px;display:flex;flex-direction:column;gap:1px;overflow:auto;
   background:color-mix(in srgb,var(--surface-2) 70%,var(--accent-soft));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
 .pm-h{font:600 11px/1 var(--sans);color:var(--muted);padding:12px 8px 6px}
 :root[lang="ar"] .pm-h{font-size:12.5px}
@@ -316,7 +316,7 @@ button{font:inherit;color:inherit}
 /* phones: iPhone Photos */
 @media(max-width:700px){
   #win-photos{height:auto}
-  #win-photos .bar{position:relative;width:auto;background:var(--surface-2);border-bottom:1px solid var(--line)}
+  #win-photos .bar{position:relative;width:auto;height:38px;padding:0 12px;background:var(--surface-2);border-bottom:1px solid var(--line)}
   #win-photos .bar b{display:block}
   .pm{display:block}
   .pm-side,.pm-zoom{display:none}
@@ -345,3 +345,7 @@ body.pm-lock{overflow:hidden}
 @media(max-width:700px){#dock [data-open="resume"]{display:none}}
 
 @keyframes lbIn{from{opacity:0}}
+
+/* Arabic: email reads LTR but sits on the right; GitHub link sits on the left */
+:root[dir="rtl"] .email{text-align:right}
+:root[dir="rtl"] .proj-link{align-self:flex-end}
