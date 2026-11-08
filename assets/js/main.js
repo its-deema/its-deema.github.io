@@ -96,11 +96,11 @@ function photosInit(w){var root=$('.pm',w),tiles=$$('.pm-tile',w),srcs=$$('.pm-s
   function upd(){var n=vis().length;count.textContent=n+' '+T.photosWord;empty.hidden=n>0}
   function filter(k){f=k;srcs.concat(segs).forEach(function(x){x.classList.toggle('on',x.dataset.f===k)});tiles.forEach(function(b){b.hidden=!!k&&b.dataset.p!==k});title.textContent=phName(k);upd()}
   srcs.concat(segs).forEach(function(b){b.onclick=function(){filter(b.dataset.f)}});
-  function show(n){cur=(n+list.length)%list.length;var g=GALLERY[+list[cur].dataset.i];vimg.src=g.src;$('.pm-vt b',view).textContent=g[LANG];$('.pm-vt span',view).textContent=GALLERY_PROJECTS[g.project][LANG]+' · '+(cur+1)+' / '+list.length;$('.pm-arrows',view).hidden=list.length<2;$('.pm-dots',view).innerHTML=list.map(function(_,k){return '<i'+(k===cur?' class="on"':'')+'></i>'}).join('')}
+  function show(n){cur=(n+list.length)%list.length;var g=GALLERY[+list[cur].dataset.i];vimg.onerror=function(){if(g.web&&vimg.src.indexOf(g.web)<0)vimg.src=g.src=g.web};vimg.src=g.src;$('.pm-vt b',view).textContent=g[LANG];$('.pm-vt span',view).textContent=GALLERY_PROJECTS[g.project][LANG]+' · '+(cur+1)+' / '+list.length;$('.pm-arrows',view).hidden=list.length<2;$('.pm-dots',view).innerHTML=list.map(function(_,k){return '<i'+(k===cur?' class="on"':'')+'></i>'}).join('')}
   function open(b){list=vis();show(list.indexOf(b));if(phone())document.body.appendChild(view);view.hidden=false;root.classList.add('viewing');if(phone())document.body.classList.add('pm-lock');requestAnimationFrame(function(){view.classList.add('in')});$('.pm-back',view).focus({preventScroll:true})}
   function close(){view.classList.remove('in');root.classList.remove('viewing');document.body.classList.remove('pm-lock');setTimeout(function(){view.hidden=true;if(view.parentNode!==$('.pm-main',w))$('.pm-main',w).appendChild(view)},reduce?0:200);var t=list[cur];if(t)t.focus({preventScroll:true})}
   var touch=matchMedia('(hover:none)').matches;
-  tiles.forEach(function(b){$('img',b).onerror=function(){b.classList.add('bad');upd()};
+  tiles.forEach(function(b){var g=GALLERY[+b.dataset.i];$('img',b).onerror=function(){if(g.web&&g.src!==g.web){g.src=g.web;this.src=g.web;return}b.classList.add('bad');upd()};
     b.onclick=function(){if(touch||phone()){open(b);return}tiles.forEach(function(x){x.classList.toggle('sel',x===b)})};
     b.ondblclick=function(){if(!touch&&!phone())open(b)};
     b.onkeydown=function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();open(b)}}});
@@ -232,6 +232,6 @@ setTheme(saved==='dark'?'dark':'light');
 setLang(savedLang==='ar'?'ar':'en');
 requestAnimationFrame(function(){openWin('about');if(innerWidth>700)setTimeout(function(){openWin('experience')},250)});
 /* warm the photo cache once the page is idle, so Photos opens instantly */
-addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){GALLERY.forEach(function(g){var i=new Image();i.referrerPolicy='no-referrer';i.src=g.src})})});
+addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){GALLERY.forEach(function(g){var i=new Image();i.referrerPolicy='no-referrer';i.onerror=function(){if(g.web&&g.src!==g.web){g.src=g.web;i.onerror=null;i.src=g.web}};i.src=g.src})})});
 addEventListener('resize',function(){if(innerWidth>700)$$('.win',wins).forEach(function(w){var id=w.id.slice(4);if(WIN[id])place(w,WIN[id])})});
 })();

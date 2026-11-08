@@ -16,12 +16,12 @@ var GALLERY_PROJECTS={
   kerdle:{en:'Kerdle',ar:'Kerdle'}
 };
 var GALLERY=[
-  {project:'nafas',src:'https://github.com/user-attachments/assets/f948859a-c447-47eb-9154-1c51401f05e5',en:'Chat interface',ar:'واجهة المحادثة'},
-  {project:'nafas',src:'https://github.com/user-attachments/assets/2e20736e-ced1-43ae-902a-93d534e0211e',en:'Journaling',ar:'التدوين'},
-  {project:'nafas',src:'https://github.com/user-attachments/assets/c99ec08a-b6a6-4e8f-914c-b78368643dd4',en:'Analytics dashboard',ar:'لوحة التحليلات'},
-  {project:'toothtruth',src:'https://github.com/user-attachments/assets/fb4e57c3-06bb-4e8a-984f-5e19f99f610c',en:'Dental diseases tree',ar:'شجرة أمراض الأسنان'},
-  {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/8459e845-1c88-47d7-800c-74388803820f',en:'Home page',ar:'الصفحة الرئيسية'},
-  {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/b4560b23-7f09-4e0c-9feb-1bc4fee94722',en:'Game page',ar:'صفحة اللعب'},
+  {project:'nafas',src:'assets/img/nafas-chat.webp',web:'https://github.com/user-attachments/assets/f948859a-c447-47eb-9154-1c51401f05e5',en:'Chat interface',ar:'واجهة المحادثة'},
+  {project:'nafas',src:'assets/img/nafas-journal.webp',web:'https://github.com/user-attachments/assets/2e20736e-ced1-43ae-902a-93d534e0211e',en:'Journaling',ar:'التدوين'},
+  {project:'nafas',src:'assets/img/nafas-analytics.webp',web:'https://github.com/user-attachments/assets/c99ec08a-b6a6-4e8f-914c-b78368643dd4',en:'Analytics dashboard',ar:'لوحة التحليلات'},
+  {project:'toothtruth',src:'assets/img/toothtruth-tree.webp',web:'https://github.com/user-attachments/assets/fb4e57c3-06bb-4e8a-984f-5e19f99f610c',en:'Dental diseases tree',ar:'شجرة أمراض الأسنان'},
+  {project:'kerdle',src:'assets/img/kerdle-home.webp',web:'https://github.com/its-deema/Kerdle-Game/assets/119051799/8459e845-1c88-47d7-800c-74388803820f',en:'Home page',ar:'الصفحة الرئيسية'},
+  {project:'kerdle',src:'assets/img/kerdle-game.webp',web:'https://github.com/its-deema/Kerdle-Game/assets/119051799/b4560b23-7f09-4e0c-9feb-1bc4fee94722',en:'Game page',ar:'صفحة اللعب'},
   {project:'kerdle',src:'https://github.com/its-deema/Kerdle-Game/assets/119051799/7ed30a36-5a98-4ac7-aa27-1f4e4146699f',en:'Guessing a word',ar:'أثناء التخمين'}
 ];
 
