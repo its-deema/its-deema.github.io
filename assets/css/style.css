@@ -346,6 +346,5 @@ body.pm-lock{overflow:hidden}
 
 @keyframes lbIn{from{opacity:0}}
 
-/* Arabic: email reads LTR but sits on the right; GitHub link sits on the left */
+/* Arabic: email reads LTR but sits on the right */
 :root[dir="rtl"] .email{text-align:right}
-:root[dir="rtl"] .proj-link{align-self:flex-end}
