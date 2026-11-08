@@ -36,7 +36,8 @@ var CONTENT={
   ],
   facts:[['Now','Ntg Clarity'],['Focus','Software engineering'],['Languages','Arabic · English']],
   now:[{k:'Building',v:'An AI project in Arabic, powered by RAG.'},
-       {k:'Learning',v:'How AI finds the right information and uses it.'}],
+       {k:'Learning',v:'How AI finds the right information and uses it.'},
+       {k:'Also learning',v:'.NET, building web APIs with C# and ASP.NET Core.'}],
   trash:[{f:'works_on_my_machine.sh',n:'Replaced with Docker'},{f:'docs_coming_soon.md',n:'Codeduc wrote them'},{f:'final_v2_REAL_final.fig',n:'There was a v3'}],
   experience:[
     {role:'AI Product Engineer',org:'Ntg Clarity',date:'May 2026 – Present',
@@ -101,7 +102,8 @@ var CONTENT={
   ],
   facts:[['حالياً','Ntg Clarity'],['التركيز','هندسة البرمجيات'],['اللغات','العربية · الإنجليزية']],
   now:[{k:'أبني',v:'مشروع ذكاء اصطناعي بالعربي، يشتغل بتقنية ⁦RAG⁩'},
-       {k:'أتعلّم',v:'كيف يوصل الذكاء الاصطناعي للمعلومة الصح ويستخدمها.'}],
+       {k:'أتعلّم',v:'كيف يوصل الذكاء الاصطناعي للمعلومة الصح ويستخدمها.'},
+       {k:'وأتعلّم بعد',v:'تطوير واجهات برمجية بمنصة ⁦.NET⁩ ولغة ⁦C#⁩ وإطار ⁦ASP.NET Core⁩.'}],
   trash:[{f:'works_on_my_machine.sh',n:'استُبدل بـ Docker'},{f:'docs_coming_soon.md',n:'كتبها ⁦Codeduc⁩'},{f:'final_v2_REAL_final.fig',n:'كان فيه نسخة ثالثة'}],
   experience:[
     {role:'مهندسة منتجات ذكاء اصطناعي',org:'Ntg Clarity',date:'مايو 2026 – الآن',

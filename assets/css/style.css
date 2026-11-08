@@ -242,7 +242,7 @@ button{font:inherit;color:inherit}
 .tr-done{text-align:center;padding:28px 0 18px;margin:0!important}
 .dicon.empty .tr-paper{display:none}
 
-.proj-link{align-self:flex-start;display:inline-flex;align-items:center;gap:5px;margin-top:8px;font:500 12px/1 var(--sans);color:var(--ink);text-decoration:none;opacity:.75}
+.proj-link{align-self:flex-end;display:inline-flex;align-items:center;gap:5px;margin-top:8px;font:500 12px/1 var(--sans);color:var(--ink);text-decoration:none;opacity:.75}
 .proj-link svg{width:13px;height:13px}
 .proj-link:hover{opacity:1;color:var(--accent)}
 
