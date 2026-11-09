@@ -43,6 +43,7 @@ var APPS=[
  {id:'projects',icon:appIcon('#9ED08A','#5E9F4C','<path d="M15 21h11l3 3h16v18H15z"/>')},
  {id:'skills',icon:appIcon('#3A3F47','#1C1F24','<path d="M18 23l7 7-7 7M29 38h13"/>')},
  {id:'resume',icon:appIcon('#FFE08A','#F4B93E','<circle cx="30" cy="26" r="9"/><path d="M24.5 33.5L22 45l8-4 8 4-2.5-11.5"/>')},
+ {id:'skilllist',icon:appIcon('#F9C08F','#EE8A4F','<path d="M30 15l3.6 9.4L43 28l-9.4 3.6L30 41l-3.6-9.4L17 28l9.4-3.6z"/><path d="M42 38l1.4 3.6L47 43l-3.6 1.4L42 48l-1.4-3.6L37 43l3.6-1.4z"/>')},
  {id:'photos',icon:appIcon('#F6B7C6','#E07F9A','<rect x="16" y="19" width="28" height="22" rx="3"/><circle cx="37" cy="26" r="2.2"/><path d="M18 39l8-8 6 6 4-4 6 6"/>')},
  {id:'contact',icon:appIcon('#7FC4F2','#3B8FD6','<rect x="15" y="20" width="30" height="21" rx="3"/><path d="M16 22l14 10 14-10"/>')}
 ];
@@ -52,7 +53,8 @@ var WIN={
  about:{t:function(){return T.about},w:440,pos:[.06,.4],html:aboutHTML},
  experience:{t:function(){return T.experience},w:500,pos:[.55,.36],html:expHTML},
  projects:{t:function(){return T.projects},w:620,pos:[.3,.24],html:projHTML},
- skills:{t:function(){return innerWidth<=700?T.skills:T.skillsWin},w:520,pos:[.32,.28],html:function(){if(innerWidth<=700)return skillsHTML();return '<div class="term" dir="ltr"><div class="t-out"></div><label class="t-line"><span class="t-ps">deema@desktop ~ %</span><input class="t-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal input"></label></div>'},init:function(w){if($('.term',w))termInit(w)}},
+ skilllist:{t:function(){return T.skilllist},w:520,pos:[.32,.28],html:skillsHTML},
+ skills:{t:function(){return T.skillsWin},w:520,pos:[.32,.28],html:function(){return '<div class="term" dir="ltr"><div class="t-out"></div><label class="t-line"><span class="t-ps">deema@desktop ~ %</span><input class="t-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal input"></label></div>'},init:termInit},
  writing:{t:function(){return T.writing},w:420,pos:[.5,.46],html:function(){return listHTML(D.writing.map(function(w){return{a:w.title,d:w.date,url:w.url}}))}},
  contact:{t:function(){return T.contact},w:440,pos:[.56,.5],html:contactHTML},
  resume:{t:function(){return T.resumeFile},w:440,pos:[.62,.2],html:resumeHTML},

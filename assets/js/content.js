@@ -158,14 +158,14 @@ var CONTENT={
 
 var UI={
  en:{about:'About',experience:'Experience',projects:'Projects',skills:'Terminal',writing:'Writing',contact:'Contact',resume:'Certificates',resumeFile:'Certificates',
-  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',library:'Library',allPhotos:'All Photos',photosWord:'photos',spaceHint:'Click or press Space to preview',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty',trashCount:' items',
+  skillsWin:'Terminal — zsh',terminal:'Terminal',noteTitle:'Currently',photos:'Photos',all:'All',noPhotos:'Photos are on their way.',library:'Library',allPhotos:'All Photos',photosWord:'photos',spaceHint:'Click or press Space to preview',skilllist:'Skills',trash:'Trash',emptyTrash:'Empty Trash',trashEmpty:'Trash is empty',trashCount:' items',
   tHello:'Welcome! Type help to see what you can do here.',tHelp:{help:'show this list',whoami:'who is Deema',now:'what I am up to',skills:'my tech stack',ls:'list apps',open:'open an app, e.g. open projects',lang:'switch to Arabic',theme:'light or dark',clear:'clear the screen'},
   tOpening:'Opening',tNotFound:'command not found',tTry:'Try help.',tSudo:'Permission granted. Opening contact so you can say hi.',
 education:'Education',certs:'Certifications',highlight:'Highlight',
   openResume:'Open résumé (PDF)',open2:'Open to software engineering roles, collaborations, and interesting problems.',
   copy:'Copy email',copied:'Copied',locale:'en-US',langBtn:'ع'},
  ar:{about:'نبذة',experience:'الخبرات',projects:'المشاريع',skills:'الطرفية',writing:'الكتابات',contact:'تواصل',resume:'الشهادات',resumeFile:'الشهادات',
-  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',library:'المكتبة',allPhotos:'كل الصور',photosWord:'صور',spaceHint:'اضغط أو استخدم المسافة للمعاينة',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فارغة',trashCount:' عناصر',
+  skillsWin:'الطرفية — zsh',terminal:'الطرفية',noteTitle:'حالياً',photos:'الصور',all:'الكل',noPhotos:'الصور في الطريق.',library:'المكتبة',allPhotos:'كل الصور',photosWord:'صور',spaceHint:'اضغط أو استخدم المسافة للمعاينة',skilllist:'المهارات',trash:'سلة المهملات',emptyTrash:'إفراغ السلة',trashEmpty:'السلة فارغة',trashCount:' عناصر',
   tHello:'أهلاً! اكتب help لتشوف وش تقدر تسوي هنا.',tHelp:{help:'عرض هذه القائمة',whoami:'من هي ديما',now:'وش أشتغل عليه حالياً',skills:'التقنيات التي أستخدمها',ls:'عرض التطبيقات',open:'فتح تطبيق، مثل open projects',lang:'التبديل إلى الإنجليزية',theme:'فاتح أو داكن',clear:'مسح الشاشة'},
   tOpening:'جارٍ فتح',tNotFound:'الأمر غير موجود',tTry:'جرّب help.',tSudo:'تم منح الصلاحية. نفتح لك صفحة التواصل عشان تسلّم.',
 education:'التعليم',certs:'الشهادات',highlight:'إنجاز',
