@@ -43,7 +43,7 @@ var APPS=[
  {id:'projects',icon:appIcon('#9ED08A','#5E9F4C','<path d="M15 21h11l3 3h16v18H15z"/>')},
  {id:'skills',icon:appIcon('#3A3F47','#1C1F24','<path d="M18 23l7 7-7 7M29 38h13"/>')},
  {id:'resume',icon:appIcon('#FFE08A','#F4B93E','<circle cx="30" cy="26" r="9"/><path d="M24.5 33.5L22 45l8-4 8 4-2.5-11.5"/>')},
- {id:'skilllist',icon:appIcon('#F9C08F','#EE8A4F','<path d="M30 15l3.6 9.4L43 28l-9.4 3.6L30 41l-3.6-9.4L17 28l9.4-3.6z"/><path d="M42 38l1.4 3.6L47 43l-3.6 1.4L42 48l-1.4-3.6L37 43l3.6-1.4z"/>')},
+ {id:'skilllist',icon:appIcon('#F6B7C6','#E07F9A','<path d="M19 20h7a4 4 0 1 1 8 0h7v8a4 4 0 1 1 0 8v8H34a4 4 0 1 0-8 0h-7v-8a4 4 0 1 0 0-8z"/>')},
  {id:'photos',icon:appIcon('#F6B7C6','#E07F9A','<rect x="16" y="19" width="28" height="22" rx="3"/><circle cx="37" cy="26" r="2.2"/><path d="M18 39l8-8 6 6 4-4 6 6"/>')},
  {id:'contact',icon:appIcon('#7FC4F2','#3B8FD6','<rect x="15" y="20" width="30" height="21" rx="3"/><path d="M16 22l14 10 14-10"/>')}
 ];
