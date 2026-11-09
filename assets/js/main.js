@@ -52,7 +52,7 @@ var WIN={
  about:{t:function(){return T.about},w:440,pos:[.06,.4],html:aboutHTML},
  experience:{t:function(){return T.experience},w:500,pos:[.55,.36],html:expHTML},
  projects:{t:function(){return T.projects},w:620,pos:[.3,.24],html:projHTML},
- skills:{t:function(){return T.skillsWin},w:520,pos:[.32,.28],html:function(){return '<div class="term" dir="ltr"><div class="t-out"></div><label class="t-line"><span class="t-ps">deema@desktop ~ %</span><input class="t-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal input"></label></div>'},init:termInit},
+ skills:{t:function(){return innerWidth<=700?T.skills:T.skillsWin},w:520,pos:[.32,.28],html:function(){if(innerWidth<=700)return skillsHTML();return '<div class="term" dir="ltr"><div class="t-out"></div><label class="t-line"><span class="t-ps">deema@desktop ~ %</span><input class="t-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal input"></label></div>'},init:function(w){if($('.term',w))termInit(w)}},
  writing:{t:function(){return T.writing},w:420,pos:[.5,.46],html:function(){return listHTML(D.writing.map(function(w){return{a:w.title,d:w.date,url:w.url}}))}},
  contact:{t:function(){return T.contact},w:440,pos:[.56,.5],html:contactHTML},
  resume:{t:function(){return T.resumeFile},w:440,pos:[.62,.2],html:resumeHTML},

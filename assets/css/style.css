@@ -248,7 +248,6 @@ button{font:inherit;color:inherit}
 
 /* ---------- phones: no terminal, full-width windows that grow with their content ---------- */
 @media(max-width:700px){
-  #dock [data-open="skills"]{display:none}
   .win{width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important}
   .win .body{max-height:none!important;overflow:visible}
   .win .l-zoom{pointer-events:none}
@@ -256,8 +255,8 @@ button{font:inherit;color:inherit}
   .desk{padding-bottom:110px}
 }
 
-/* photos lives on the desktop; on phones (no desktop icons) it moves into the dock */
-@media(min-width:701px){#dock [data-open="photos"]{display:none}}
+/* photos lives on the desktop icons only; on phones the dock shows skills instead */
+#dock [data-open="photos"]{display:none}
 
 /* ---------- photos: macOS Photos look ---------- */
 #win-photos{height:min(580px,calc(100svh - 170px))}
